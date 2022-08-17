@@ -10,11 +10,17 @@ type PCIAddress struct {
 	Device, Function string
 }
 
+type PTPCaps struct {
+	HwRx, HwTx, HwRawClock bool
+}
+
 type Iface struct {
-	IfName  string
-	IfMac   Mac
-	IfIndex int
-	IfPci   PCIAddress
+	IfName    string
+	IfMac     Mac
+	IfIndex   int
+	IfPci     PCIAddress
+	IfPTPCaps PTPCaps
+	IfUp      bool
 }
 
 type Neighbors struct {
