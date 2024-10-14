@@ -47,7 +47,6 @@ jobs:
           trimpath: true
           
       - name: Authenticate against Quay.io
-        if: ${{ github.ref == 'refs/heads/main' && github.repository_owner == 'redhat-cne' }}
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
@@ -57,5 +56,4 @@ jobs:
           password: ${{ secrets.QUAY_ROBOT_TOKEN }}
 
       - name: Build and push image
-        if: ${{ github.ref == 'refs/heads/main' && github.repository_owner == 'redhat-cne' }}
         run: ./scripts/image.sh ci
