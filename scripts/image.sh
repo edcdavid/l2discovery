@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-VERSION=latest
-IMAGE_NAME=l2discovery
-REPO=quay.io/redhat-cne
+VERSION=l2disc
+IMAGE_NAME=test
+REPO=quay.io/deliedit
 make test
 
 if [[ $# -eq 0 ]]; then
