@@ -41,7 +41,7 @@ jobs:
           ref: ${{ github.sha }}
 
       - name: Extract dependent Pull Requests
-        uses: depends-on/depends-on-action@9e8a61fce18b15281e831f1bba0e14c71d1e1f46 # main
+        uses: depends-on/depends-on-action@61cb3f4a0e2c8ae4b90c9448dc57c7ba9ca24c35 # main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
